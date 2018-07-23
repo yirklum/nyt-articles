@@ -1,0 +1,23 @@
+{
+  "name": "nyt-articles",
+  "version": "1.0.0",
+  "description": "NYT Article Collector",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yirklum/nyt-articles.git"
+  },
+  "author": "Christina Rust",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yirklum/nyt-articles/issues"
+  },
+  "homepage": "https://github.com/yirklum/nyt-articles#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}

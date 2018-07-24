@@ -27,8 +27,8 @@ export default {
     
     const authKey = "fbcf0b26206c4b9aae7d6eb569789e46";
 
-    let queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=" + {authKey} +
-    "&q=" + {keyWord} + "&begin_date=" + {startYear} + "0101 &end_date=" + {endYear} + "0101";
+    let queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=" + authKey +
+    "&q=" + keyWord + "&begin_date=" + startYear + "0101 &end_date=" + endYear + "0101";
   
 
     return axios.get(queryURL);

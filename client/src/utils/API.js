@@ -23,12 +23,12 @@ export default {
   },
 
   // Search NYT API
-  getArticles: function(keyword, startYear, endYear) {
+  getArticles: function(keyWord, startYear, endYear) {
     
     const authKey = "fbcf0b26206c4b9aae7d6eb569789e46";
 
     let queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=" + {authKey} +
-    "&q=" + {keyword} + "&begin_date=" + {startYear} + "0101 &end_date=" + {endYear} + "0101";
+    "&q=" + {keyWord} + "&begin_date=" + {startYear} + "0101 &end_date=" + {endYear} + "0101";
   
 
     return axios.get(queryURL);

@@ -12,5 +12,13 @@ router
   .get(articlesController.findById)
   .put(articlesController.update)
   .delete(articlesController.remove);
+  
+  app.get('/', function(req, res, next) {
+    // Handle the get for this route
+  });
+  
+  app.post('/', function(req, res, next) {
+   // Handle the post for this route
+  });
 
 module.exports = router;

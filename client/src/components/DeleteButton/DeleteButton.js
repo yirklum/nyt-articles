@@ -2,9 +2,9 @@ import React from "react";
 import "./DeleteButton.css";
 
 const DeleteButton = props => (
-    <btn className="delete-button btn btn-danger" {...props}>
+    <button className="delete-button btn btn-danger" {...props}>
         Delete Article
-    </btn>    
+    </button>    
 );
 
 export default DeleteButton;

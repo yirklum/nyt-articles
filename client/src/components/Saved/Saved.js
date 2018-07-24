@@ -18,6 +18,9 @@ const Saved = props => (
                         <a href={article.url} target="_blank">
                             {article.title}
                         </a>
+                        {/* {article.author}
+                        {article.date}
+                        {article.synopsis} */}
                         <DeleteButton onClick={() => {
                             props.delete(article.externalID);
                             }

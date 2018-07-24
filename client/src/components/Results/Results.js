@@ -1,6 +1,6 @@
 import React from "react";
 import SaveButton from "../SaveButton";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { Col, Container } from "../Grid";
 import { List, ListItem } from "../List";
 
@@ -17,12 +17,17 @@ const Results = props => (
                     <ListItem key={article._id}>
                         <a href={article.web_url} target="_blank">
                             {article.headline.main}
-                        </a>
+                        </a> <br/>
+                        {article.byline.original} <br/>
+                        {article.pub_date} <br/>
+                        {article.snippet} <br/> 
                         <SaveButton onClick={() => {
                             props.saveArticle(
                             {
                                 title: article.headline.main,
+                                date: article.pub_date,
                                 url: article.web_url,
+                                synopsis: article.snippet,
                                 externalID: article._id
                             }
                             );

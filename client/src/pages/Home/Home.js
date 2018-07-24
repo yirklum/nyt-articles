@@ -58,9 +58,10 @@ class Home extends Component {
                 this.setState(
                     {
                         savedArticles: res.data
-                    }    
+                    }  
                 ))
                 .catch(err => console.log(err));
+                 
     };
   
     // Delete an article
@@ -128,10 +129,10 @@ class Home extends Component {
                         toggleModal={this.toggleModal}
                     />    
 
-                    {/* <Saved
+                    <Saved
                         savedArticles={this.state.savedArticles}
                         delete={this.deleteArticle}
-                    /> */}
+                    />
             
                 </Col>
             </Row>

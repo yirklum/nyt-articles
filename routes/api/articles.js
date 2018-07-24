@@ -13,12 +13,18 @@ router
   .put(articlesController.update)
   .delete(articlesController.remove);
   
-  app.get('/', function(req, res, next) {
-    // Handle the get for this route
-  });
+  // app.get('/', function(req, res, next) {
+  //   // Handle the get for this route
+  // });
+
+
+  // // Get saved articles
+  // getSavedArticles: function() {
+  //   return axios.get("/api/articles");
+  // },
   
-  app.post('/', function(req, res, next) {
-   // Handle the post for this route
-  });
+  // app.post('/', function(req, res, next) {
+  //  // Handle the post for this route
+  // });
 
 module.exports = router;

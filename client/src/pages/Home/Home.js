@@ -25,7 +25,7 @@ class Home extends Component {
                 endYear: ""
             }
         )
-        this.loadSavedArticles();
+        this.loadSavedArticles(); 
     }
 
     // Load articles
@@ -55,9 +55,10 @@ class Home extends Component {
     loadSavedArticles = () => {
         API.getSavedArticles()
             .then(res =>
+                console.log(res.data),
                 this.setState(
                     {
-                        savedArticles: res.data
+                        // savedArticles: res.data
                     }  
                 ))
                 .catch(err => console.log(err));

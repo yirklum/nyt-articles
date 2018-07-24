@@ -18,7 +18,7 @@ const Results = props => (
                         <a href={article.web_url} target="_blank">
                             {article.headline.main}
                         </a> <br/>
-                        {article.byline.original} <br/>
+                        {article.byline.original}<br/>
                         {article.pub_date} <br/>
                         {article.snippet} <br/> 
                         <SaveButton onClick={() => {

@@ -2,7 +2,7 @@
   "name": "nyt-articles",
   "version": "1.0.0",
   "description": "NYT Article Collector",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
@@ -21,10 +21,14 @@
   },
   "homepage": "https://github.com/yirklum/nyt-articles#readme",
   "dependencies": {
+    "axios": "^0.18.0",
     "body-parser": "^1.18.3",
     "concurrently": "^3.6.0",
     "express": "^4.16.3",
+    "if-env": "^1.0.4",
     "mongoose": "^5.2.5",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "react-dom": "^16.4.1",
+    "react-router-dom": "^4.3.1"
   }
 }

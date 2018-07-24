@@ -1,10 +1,10 @@
 import React from "react";
-import { Col, Container } from "../../components/Grid";
-import { Input, FormBtn } from "../../components/Form";
-import { PromiseProvider } from "mongoose";
+import { Col, Container } from "../Grid";
+import { Input } from "../Form";
+import SearchButton from "../SearchButton";
 
 const Search = props => (
-    <Col>
+    <Col size="md-12">
         <Container>
             <h1> Search for Articles</h1>
         </Container>
@@ -20,7 +20,7 @@ const Search = props => (
                 value={props.startYear}
                 onChange={props.onChangeStartYear}
                 name={props.startYearName}
-                placeholder={Props.startYearPlaceholder}
+                placeholder={props.startYearPlaceholder}
             />
             <Input    
                 value={props.endYear}
@@ -37,3 +37,5 @@ const Search = props => (
         </form>
     </Col>          
 )
+
+export default Search;

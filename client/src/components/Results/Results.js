@@ -1,14 +1,14 @@
 import React from "react";
-import SaveButton from "../../components/SaveButton";
-// import { Link } from "react-router-dom";
-import { Col, Container } from "../../components/Grid";
-import { List, ListItem } from "../../components/List";
+import SaveButton from "../SaveButton";
+import { Link } from "react-router-dom";
+import { Col, Container } from "../Grid";
+import { List, ListItem } from "../List";
 
 const Results = props => (
 
-    <Col>
+    <Col size="md-12">
         <Container>
-            <h1>Your Articles</h1>
+            <h1>Search Results</h1>
         </Container>
 
         {props.articles.length ? (
@@ -38,6 +38,6 @@ const Results = props => (
             )}    
 
     </Col>
-);
+)
 
 export default Results;

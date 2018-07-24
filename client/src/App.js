@@ -3,7 +3,8 @@ import React from "react";
 // import { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import './App.css';
-import * as Home from "./pages/Home";
+import Home from "./pages/Home";
+import NoMatch from "./pages/NoMatch";
 // import { Container } from "./components/Grid";
 
 
@@ -32,8 +33,9 @@ const App = () => (
     <div>
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/home" component={Home} />
-          <Route exact path="/home/:id" component={Home} />
+          <Route exact path="/articles" component={Home} />
+          <Route exact path="/articles/:id" component={Home} />
+          <Route component={NoMatch} />
         </Switch>
     </div>
   </Router>

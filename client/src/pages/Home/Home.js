@@ -1,17 +1,10 @@
 import React, { Component } from "react";
 import API from "../../utils/API";
 import Jumbotron from "../../components/Jumbotron";
-// import DeleteBtn from "../../components/DeleteBtn";
 import { Col, Row, Container } from "../../components/Grid";
 import Search from "../../components/Search";
 import Results from "../../components/Results";
 import Saved from "../../components/Saved";
-
-// import { Link } from "react-router-dom";
-// import { List, ListItem } from "../../components/List";
-// import { Input, TextArea } from "../../components/Form";
-// import SearchButton from "../../components/SearchButton";
-
 
 class Home extends Component {
   state = {
@@ -35,6 +28,7 @@ class Home extends Component {
         this.loadSavedArticles();
     }
 
+    // Load articles
     loadArticles = (keyWord, startYear, endYear) => {
         API.getArticles(keyWord, startYear, endYear)
             .then(res =>
@@ -49,6 +43,7 @@ class Home extends Component {
             .catch(err => console.log(err));
     };
 
+    // Save an article
     saveArticle = obj => {
         API.saveArticle(obj)
             .then(res => this.loadSavedArticles())
@@ -56,6 +51,7 @@ class Home extends Component {
             this.loadSavedArticles();
     };
 
+    // Load saved articles
     loadSavedArticles = () => {
         API.getSavedArticles()
             .then(res =>
@@ -67,6 +63,7 @@ class Home extends Component {
                 .catch(err => console.log(err));
     };
   
+    // Delete an article
     deleteArticle = id => {
         API.deleteArticle(id)
         .then(res => this.loadSavedArticles())
@@ -74,7 +71,7 @@ class Home extends Component {
         this.loadSavedArticles();
     };
 
-
+    // Handle input
     handleInputChange = event => {
         const { name, value } = event.target;
         this.setState({
@@ -82,6 +79,7 @@ class Home extends Component {
         });
     };
 
+    // Handle form submission
     handleFormSubmit = event => {
         event.preventDefault();
         if (this.state.title)
@@ -93,7 +91,7 @@ class Home extends Component {
 
     toggleModal = () => {
       this.setState({isOpen: !this.state.isOpen})
-    };
+    }
 
     render() {
         return (
@@ -107,7 +105,7 @@ class Home extends Component {
                     <Search
                         keyWord={this.state.title}
                         onChangeSearch={this.handleInputChange}
-                        searchName="keyword"
+                        searchName="title"
                         searchPlaceholder="Keyword (required)"
 
                         startYear={this.state.startYear}
@@ -120,7 +118,7 @@ class Home extends Component {
                         endYearName="endYear"
                         endYearPlaceholder="End Year (required)"
 
-                        disabled={!(this.state.keyword)}
+                        disabled={!(this.state.title)}
                         onClick={this.handleFormSubmit}
                     />    
             
@@ -130,10 +128,10 @@ class Home extends Component {
                         toggleModal={this.toggleModal}
                     />    
 
-                    <Saved
+                    {/* <Saved
                         savedArticles={this.state.savedArticles}
                         delete={this.deleteArticle}
-                    />
+                    /> */}
             
                 </Col>
             </Row>

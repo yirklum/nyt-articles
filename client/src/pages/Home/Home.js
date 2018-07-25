@@ -20,6 +20,7 @@ class Home extends Component {
         this.setState(
             {
                 articles: [],
+                savedArticles: [],
                 title: "",
                 startYear: "",
                 endYear: ""
@@ -58,7 +59,7 @@ class Home extends Component {
                 console.log(res.data),
                 this.setState(
                     {
-                        // savedArticles: res.data
+                        savedArticles: res.data
                     }  
                 ))
                 .catch(err => console.log(err));

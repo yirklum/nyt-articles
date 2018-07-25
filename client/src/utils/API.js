@@ -2,6 +2,11 @@ import axios from "axios";
 
 export default {
 
+  // Get saved articles
+  getArticles: function() {
+    return axios.get("/api/articles");
+  },
+
   // Get article with given id
   getArticle: function(id) {
     return axios.get("/api/articles/" + id);
@@ -15,11 +20,6 @@ export default {
   // Save article to database
   saveArticle: function(articleData) {
     return axios.post("/api/articles", articleData);
-  },
-
-  // Get saved articles
-  getSavedArticles: function() {
-    return axios.get("/api/articles");
   },
 
   // Search NYT API

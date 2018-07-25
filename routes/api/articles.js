@@ -17,7 +17,9 @@ router
   //   // Handle the get for this route
   // });
 
-
+// router.route("/api/articles")
+//   .get(articlesController.findById)
+//   .post(articlesController.create);
   // // Get saved articles
   // getSavedArticles: function() {
   //   return axios.get("/api/articles");
